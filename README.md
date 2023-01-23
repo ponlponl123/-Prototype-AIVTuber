@@ -35,6 +35,7 @@ this project is in development...
 
 ## VTube Studio API
 I'm using the [VTS Desktop Audio Plugin by Lua Lucky](https://lualucky.itch.io/vts-desktop-audio-plugin) to capture the sound and send it as Parameters so that the sides of the character can move.
+
 [Plugins list](https://github.com/DenchiSoft/VTubeStudio)
 
 https://lualucky.itch.io/vts-desktop-audio-plugin
