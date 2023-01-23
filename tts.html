@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* custom fonts */
+        *{
+            font-family: 'Fredoka One', cursive;
+        }
+        html{
+            font-family: 'Fredoka One', cursive;
+        }
+        body{
+            font-family: 'Fredoka One', cursive;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            max-width: 100vw;
+            overflow: hidden;
+        }
+        p{
+            font-size: clamp(16px,2.5vw,75px);
+            text-shadow: 1px 1px 1px #d583ff;
+            width: 100vw;
+            max-width: 1280px;
+            height: auto;
+            white-space: break-spaces;
+            text-align: center;
+            padding-bottom: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <script>
+        var socket = io();
+    </script>
+    <script>
+        socket.on('TTS', (att) => {
+            document.querySelector("p").innerHTML = att.subtitle;
+        });
+    </script>
+  </body>
+</html>
