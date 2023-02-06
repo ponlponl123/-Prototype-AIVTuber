@@ -42,4 +42,4 @@ https://lualucky.itch.io/vts-desktop-audio-plugin
 ![](https://cdn.silapa.xyz/img/devpattarapong/Screenshot%202023-01-23%20165939.png)
 
 ## node main.js
-Finally, if everything goes as expected. You will now be able to run `node main.js` successfully.
+Finally, if everything goes as expected. You will now be able to run `node main.js` successfully. 
