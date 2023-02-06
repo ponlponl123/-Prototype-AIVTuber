@@ -13,7 +13,7 @@ this project is in development...
 [Live2D Free Material License](https://www.live2d.jp/en/terms/live2d-free-material-license-agreement/)
 * **AI Language Model by OpenAI**
 [OpenAI Node License](https://github.com/openai/openai-node/blob/master/LICENSE)
-![AI VTuber by DevPattarapong](https://cdn.silapa.xyz/img/devpattarapong/Screenshot.png)
+![AI VTuber by DevPattarapong](https://github.com/ponlponl123/AIVTuber/blob/main/img/Screenshot.png)
 
 # Installation
 ## TTS (Text-to-Speech) & OpenAI
