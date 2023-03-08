@@ -8,7 +8,7 @@
 //
 require('dotenv').config();
 var twitch_username = 'TWITCH_USERNAME';
-var twitch_token = 'TWITCH_PASSWORD (TWITCH_TOKEN)';
+var twitch_token = 'TWITCH_TOKEN';
 var twitch_channel = [ 'TWITCH_CHANNEL' ];
 // FFMPEG
 var ffmpeg_path = 'FFMPEG_PATH'; // like this: c:/ffmpeg/bin/ffmpeg.exe
@@ -60,35 +60,28 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-async function convertMp3ToWav(AudioStream) {
+async function convertMp3ToWav(audioStream) {
     try {
-        await fs.writeFile('path/to/output.mp3', AudioStream, (err) => {
-            if (err) throw err;
+      await fs.writeFile('path/to/output.mp3', audioStream, (err) => {
+        if (err) throw err;
+      });
+      await fs.unlink('path/to/output.wav', (err) => {
+        if (err) console.log('No previous file to delete');
+      });
+      await new Promise((resolve, reject) => {
+        exec(`"${ffmpeg_path}" -i "path/to/output.mp3" -acodec pcm_s16le -ac 1 -ar 16000 "path/to/output.wav"`, (err) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
         });
-        await fs.unlink('path/to/output.wav', (err) => {
-            if (err) {new Promise((resolve, reject) => {
-                exec(`"${ffmpeg_path}" -i "path/to/output.mp3" -acodec pcm_s16le -ac 1 -ar 16000 "path/to/output.wav"`, (err) => {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve();
-                    }
-                });
-            });};
-        });
-        await new Promise((resolve, reject) => {
-            exec(`"${ffmpeg_path}" -i "path/to/output.mp3" -acodec pcm_s16le -ac 1 -ar 16000 "path/to/output.wav"`, (err) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve();
-                }
-            });
-        });
+      });
     } catch (err) {
-        console.error(err);
+      console.error(err);
     }
-}
+  }
+  
 
 const client = new tmi.Client({
     options: { debug: true },
@@ -99,18 +92,25 @@ const client = new tmi.Client({
     },
     channels: twitch_channel
 });
-client.connect();
+client.connect().catch((error) => {
+    console.error(error);
+});
 var ready = true;
 async function getGptResponse(VARmessage) {
-    const gptSend = await openai.createCompletion({
+    try {
+      const gptSend = await openai.createCompletion({
         model: 'text-curie-001',
         prompt: `${VARmessage}`,
         temperature: 0.9,
         max_tokens: 100,
         stop: ["ChatGPT:", "Adrian Twarog:"],
-    })
-    return gptSend;
-};
+      });
+      return gptSend;
+    } catch (err) {
+      console.error(err);
+    }
+  }
+  
 client.on('message', async (channel, tags, message, self) => {
     if(self) return;
     if(message){
