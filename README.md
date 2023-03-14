@@ -19,20 +19,8 @@ this project is in development...
 ![AI VTuber by DevPattarapong](https://github.com/ponlponl123/AIVTuber/blob/main/img/Screenshot.png)
 
 # Installation
-## TTS (Text-to-Speech) & OpenAI
-- First, you need to install all package by running the following command: `npm install dotenv`
-    ### Twitch
-    - At the variable `twitch_username` put your username as well as the variable `twitch_username`. `twitch_channel` too.
-    - As for `twitch_token`, here are the [Docs](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/#authorization-code-grant-flow) for this.
-    ### FFMPEG
-    - The `ffmpeg_path` variable is required to use ffmpeg.exe from https://ffmpeg.org/download.html.
-    - example for this `c:/ffmpeg/bin/ffmpeg.exe`
-    ### OpenAI
-    - [This is the source for the variables. `openai_apiKey`](https://beta.openai.com/account/api-keys)
-    - put the api key in the .env file
-    ### ElevenLabs
-    - Go to ElevenLabs at https://elevenlabs.io and get **API key** from Your Profile
-    
+**See Install Doc**
+[Install Document](https://github.com/openai/openai-node/blob/master/LICENSE)
 
 ## VTube Studio API
 I'm using the [VTS Desktop Audio Plugin by Lua Lucky](https://lualucky.itch.io/vts-desktop-audio-plugin) to capture the sound and send it as Parameters so that the sides of the character can move.
