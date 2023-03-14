@@ -20,7 +20,7 @@ this project is in development...
 
 # Installation
 **See Install Doc**
-[Install Document](https://github.com/openai/openai-node/blob/master/LICENSE)
+[Install Document](https://github.com/InsanityLabs/AIVTuber/blob/main/INSTALL.md)
 
 ## VTube Studio API
 I'm using the [VTS Desktop Audio Plugin by Lua Lucky](https://lualucky.itch.io/vts-desktop-audio-plugin) to capture the sound and send it as Parameters so that the sides of the character can move.
