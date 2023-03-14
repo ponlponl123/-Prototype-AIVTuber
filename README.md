@@ -4,9 +4,11 @@
 
 **Project Check List**
 - [x]  This project is also compatible with NodeJS v16.17.1.
+- [x]  Better TTS.
+- [x]  OpenAI ChatGPT.
 - [ ]  This project is outdated.
 
-# AI VTuber by DevPattarapong
+# AI VTuber by DevPattarapong & 
 this project is in development...
 
 * **Character Model by Live2D**
@@ -29,9 +31,9 @@ this project is in development...
     ### OpenAI
     - [This is the source for the variables. `openai_organization`](https://beta.openai.com/account/org-settings)
     - [This is the source for the variables. `openai_apiKey`](https://beta.openai.com/account/api-keys)
-    ### AWS
-    - Go to the AWS Console at https://console.aws.amazon.com/ and get **Access keys** from Security credentials
-    ![AWS Access keys](https://github.com/ponlponl123/AIVTuber/blob/main/img/Screenshot%202023-01-23%20203227.png)
+    ### ElevenLabs
+    - Go to ElevenLabs at https://elevenlabs.io and get **API key** from Your Profile
+    
 
 ## VTube Studio API
 I'm using the [VTS Desktop Audio Plugin by Lua Lucky](https://lualucky.itch.io/vts-desktop-audio-plugin) to capture the sound and send it as Parameters so that the sides of the character can move.
