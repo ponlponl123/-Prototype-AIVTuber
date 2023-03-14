@@ -8,7 +8,7 @@
 - [x]  OpenAI ChatGPT.
 - [ ]  This project is outdated.
 
-# AI VTuber by DevPattarapong & 
+# AI VTuber by DevPattarapong & InsanityLabs 
 this project is in development...
 
 * **Character Model by Live2D**
