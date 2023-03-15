@@ -4,7 +4,7 @@
 
 **Project Check List**
 - [x]  This project is also compatible with NodeJS v16.17.1.
-- [ ]  This project is outdated.
+- [x]  This project is outdated.
 
 # AI VTuber by DevPattarapong
 this project is in development...
