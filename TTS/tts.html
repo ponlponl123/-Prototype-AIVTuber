@@ -20,16 +20,20 @@
         body{
             font-family: 'Fredoka One', cursive;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
+            flex-direction: column;
             height: 100vh;
             width: 100vw;
             max-width: 100vw;
             overflow: hidden;
+            background-color: #333333;
+            color: white;
+
         }
         p{
             font-size: clamp(16px,2.5vw,75px);
-            text-shadow: 1px 1px 1px #d583ff;
+            
             width: 100vw;
             max-width: 1280px;
             height: auto;
@@ -38,10 +42,44 @@
             padding-bottom: 25px;
             box-sizing: border-box;
         }
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        button {
+            margin: 0 10px;
+            font-size: clamp(16px,2.5vw,75px);
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            padding: 10px 20px;
+            cursor: pointer;
+           
+        }
+        hr {
+            border: 1px solid #f9f9f9;
+            width: 90%;
+            margin-top: 25px;
+        }
     </style>
   </head>
   <body>
     <p></p>
+    <hr>
+    <div class="buttons-container">
+        <button id="button1">Button 1</button>
+        <button id="button2">Button 2</button>
+        <button id="button3">Button 3</button>
+    </div>
+    <div class="buttons-container">
+        <button id="button4">Button 4</button>
+        <button id="button5">Button 5</button>
+        <button id="button6">Button 6</button>
+    </div>
     <script>
         var socket = io();
     </script>
@@ -52,3 +90,6 @@
     </script>
   </body>
 </html>
+
+
+
