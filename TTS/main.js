@@ -243,3 +243,4 @@ function promptUser() {
 setTimeout(() => {
 	promptUser();
 }, 2500);
+console.log("current version: 0.27_insanitylabs");
