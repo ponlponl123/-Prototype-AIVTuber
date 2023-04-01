@@ -1,6 +1,6 @@
 {
   "name": "tts",
-  "version": "1.0.0",
+  "version": "0.3.1",
   "description": "for DevPattarapong AI VTuber",
   "main": "main.js",
   "scripts": {
