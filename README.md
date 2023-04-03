@@ -15,6 +15,7 @@ this project is in development...
 
 ## We currently have 2 versions for this project.
 [InsanityLabs (NovaPlayzGames)](https://github.com/ponlponl123/-Prototype-AIVTuber/tree/NovaPlayzGames)
+
 [Originals (Ponlponl123)](https://github.com/ponlponl123/-Prototype-AIVTuber/tree/originals)
 
 * **Character Model by Live2D**
