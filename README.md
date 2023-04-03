@@ -18,6 +18,7 @@ this project is in development...
 
 [Originals (Ponlponl123)](https://github.com/ponlponl123/-Prototype-AIVTuber/tree/originals)
 
+
 * **Character Model by Live2D**
 [Live2D Free Material License](https://www.live2d.jp/en/terms/live2d-free-material-license-agreement/)
 * **AI Language Model by OpenAI**
