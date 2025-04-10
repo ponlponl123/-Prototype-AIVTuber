@@ -1,7 +1,7 @@
 {
   "name": "tts",
   "version": "1.0.0",
-  "description": "for DevPattarapong AI VTuber",
+  "description": "for Ponlponl123 AI VTuber",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
@@ -17,7 +17,7 @@
     "ChatBot",
     "TTS"
   ],
-  "author": "DevPattarapong",
+  "author": "Ponlponl123",
   "license": "ISC",
   "devDependencies": {
     "node-record-lpcm16": "^1.0.1",
